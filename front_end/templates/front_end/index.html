@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Numbers</title>
+</head>
+<body>
+    <input type="number" id="number1" placeholder="Enter first number">
+    <input type="number" id="number2" placeholder="Enter second number">
+    <button id="addButton">Add Numbers</button>
+    <p id="result">Result will be shown here</p>
+
+    <script>
+        document.getElementById('addButton').addEventListener('click', function() {
+            // Get the input values
+            const number1 = document.getElementById('number1').value;
+            const number2 = document.getElementById('number2').value;
+
+            // Create the URL with query parameters
+            const url = `/api/add/?number1=${number1}&number2=${number2}`;
+
+            // Make the fetch request to the Django backend
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    // Display the result in the <p> tag
+                    document.getElementById('result').textContent = `Result: ${data.result}`;
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

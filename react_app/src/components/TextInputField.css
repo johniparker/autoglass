@@ -1,0 +1,16 @@
+/* TextInputField.css */
+.text-input {
+  padding: 10px;
+  margin: 5px;
+  width: calc(100% - 22px);
+  border: 1px solid black;
+}
+
+.text-input.error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  margin: 5px 0;
+}

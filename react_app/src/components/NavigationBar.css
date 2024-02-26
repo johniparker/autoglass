@@ -1,0 +1,19 @@
+.navigation-bar {
+  display: flex;
+  gap: 10px; /* Adjust the space between buttons as needed */
+  padding: 10px; /* Add some padding around the navigation bar */
+  background-color: #f1f1f1; /* Light background to contrast with the Aggie Blue buttons */
+}
+
+.navigation-bar a {
+  text-decoration: none;
+  color: white; /* Text color */
+  background-color: #003DA5; /* Aggie Blue */
+  padding: 10px 15px; /* Padding inside the buttons */
+  border-radius: 5px; /* Rounded corners for the buttons */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navigation-bar a:hover {
+  background-color: #002D7A; /* Slightly darker Aggie Blue on hover */
+}

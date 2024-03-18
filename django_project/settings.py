@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'front_end'
+    'rest_framework',
+    'corsheaders',
+    'front_end',
 ]
 
 MIDDLEWARE = [
@@ -49,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'django_project.urls'
@@ -120,7 +123,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'react_app/build/static'),
+    os.path.join(BASE_DIR, 'digital-journal-react-redux-example/build/static'),
 ]
 
 # Default primary key field type
@@ -128,5 +131,6 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-REACT_APP_BUILD_PATH = 'react_app/build/'
+REACT_APP_BUILD_PATH = 'digital-journal-react-redux-example/build/'
 
+CORS_ALLOW_ALL_ORIGINS = True  # Be careful with this in production

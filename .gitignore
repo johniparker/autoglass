@@ -40,3 +40,12 @@ media
 
 # Backup files # 
 *.bak 
+
+# Another react app
+digital-journal-react-redux-example/
+
+# Venv stuff
+bin/
+lib/
+lib64
+pyvenv.cfg

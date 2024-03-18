@@ -45,7 +45,12 @@ class JournalEntryViewSet(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         print(f"You tried to add '{request.data}'")
         # You can manually create a JournalEntry instance here if needed
-        return Response({"message": "Journal entry added", "data": request.data}, status=status.HTTP_201_CREATED)
+        return Response(
+            {
+                "message": "Journal entry added",
+                "data": request.data
+            },
+            status=status.HTTP_201_CREATED)
 
     def update(self, request, pk=None, *args, **kwargs):
         print(f"You tried to update entry {pk} with '{request.data}'")

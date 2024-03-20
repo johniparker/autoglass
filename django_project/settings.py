@@ -80,8 +80,14 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': '<database name>',
+        'USER': 'admin',
+        'PASSWORD': '<Your-password-here>',
+        'HOST': '<database name>.<something something 12341234>.<region>.rds.amazonaws.com',
+        'PORT': '3306',  # Default port for MySQL
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -134,3 +140,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 REACT_APP_BUILD_PATH = 'digital-journal-react-redux-example/build/'
 
 CORS_ALLOW_ALL_ORIGINS = True  # Be careful with this in production
+CSRF_COOKIE_SAMESITE = 'Lax'  # or 'None' if your cookies should be sent in cross-site requests

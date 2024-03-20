@@ -12,7 +12,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     
-    # Updated catch-all pattern that excludes /api
     # This regex matches any path that does NOT start with /api
-    re_path(r'^(?!api/).*$', serve_react, {"document_root": settings.REACT_APP_BUILD_PATH}),
+    re_path(r'^(?!api/|admin/).*$', serve_react, {"document_root": settings.REACT_APP_BUILD_PATH}),
 ]

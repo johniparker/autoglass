@@ -41,9 +41,6 @@ media
 # Backup files # 
 *.bak 
 
-# Another react app
-digital-journal-react-redux-example/
-
 # Venv stuff
 bin/
 lib/

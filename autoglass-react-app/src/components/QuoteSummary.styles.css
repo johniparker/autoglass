@@ -1,0 +1,25 @@
+/* JournalquoteSummary.styles.css */
+
+.quote-summary {
+  border: 1px solid #CFD8DC; /* Light border */
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #263238; /* Dark midnight blue background */
+  color: #FFFFFF; /* Light text */
+}
+
+.quote-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #FFFFFF; /* Light text */
+}
+
+.quote-date {
+  font-size: 0.8rem;
+  margin-top: 5px;
+  color: #FFFFFF; /* Light text */
+}
+
+.quote-body {
+  margin-top: 10px;
+}

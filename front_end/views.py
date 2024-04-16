@@ -28,7 +28,6 @@ def serve_react(request, path='', document_root=None):
 
         return static_serve(request, "index.html", document_root=document_root)
 
-
 class TokenPresent(BasePermission):
     # Allows access only if a token is present in the headers.
     def has_permission(self, request, view):

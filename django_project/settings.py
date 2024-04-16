@@ -81,10 +81,10 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': '<database name>',
+        'NAME': 'Autoglass',
         'USER': 'admin',
-        'PASSWORD': '<Your-password-here>',
-        'HOST': '<database name>.<something something 12341234>.<region>.rds.amazonaws.com',
+        'PASSWORD': 'data5570',
+        'HOST': 'autoglass-db.c0rbu6dmzwzm.us-west-1.rds.amazonaws.com',
         'PORT': '3306',  # Default port for MySQL
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': BASE_DIR / 'db.sqlite3',
@@ -129,7 +129,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'digital-journal-react-redux-example/build/static'),
+    os.path.join(BASE_DIR, 'autoglass-react-app/build/static'),
 ]
 
 # Default primary key field type
@@ -137,7 +137,7 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-REACT_APP_BUILD_PATH = 'digital-journal-react-redux-example/build/'
+REACT_APP_BUILD_PATH = 'autoglass-react-app/build/'
 
 CORS_ALLOW_ALL_ORIGINS = True  # Be careful with this in production
 CSRF_COOKIE_SAMESITE = 'Lax'  # or 'None' if your cookies should be sent in cross-site requests
